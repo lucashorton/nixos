@@ -27,6 +27,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.lucas = import ./home.nix;
           home-manager.extraSpecialArgs = {inherit nix-colors;};
+	  home-manager.backupFileExtension = "backup";
         }
       ];
     };

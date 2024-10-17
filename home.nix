@@ -12,10 +12,11 @@
 
   home.username = "lucas";
   home.homeDirectory = "/home/lucas";
+  xdg.userDirs.enable = true;
 
   home.packages = with pkgs; [
-    inxi
-    figlet
+    # WM
+    i3status-rust
 
     # Archives
     zip
@@ -24,9 +25,17 @@
     p7zip
 
     #Utils
+    rsync
     wget
     curl
     restic
+    inxi
+    figlet
+    ncdu
+    grim
+    slurp
+    wf-recorder
+    ncmpcpp
 
     #Graphics
     gimp
@@ -34,6 +43,11 @@
     imv
     zathura
     blender
+
+    #Network
+    brave
+    nextcloud-client
+    remmina
 
     #Nix
     alejandra
@@ -139,6 +153,10 @@
   };
 
   programs.swaylock = {
+    enable = true;
+  };
+
+  services.mpd = {
     enable = true;
   };
 
