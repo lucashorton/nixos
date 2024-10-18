@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -12,6 +13,7 @@
 
   outputs = {
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     nix-colors,
     ...
@@ -27,7 +29,7 @@
           home-manager.useUserPackages = true;
           home-manager.users.lucas = import ./home.nix;
           home-manager.extraSpecialArgs = {inherit nix-colors;};
-	  home-manager.backupFileExtension = "backup";
+          home-manager.backupFileExtension = "backup";
         }
       ];
     };
