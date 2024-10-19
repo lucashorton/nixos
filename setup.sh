@@ -21,7 +21,7 @@ fdisk -l $DRIVE
 PART1="${DRIVE}1"
 PART2="${DRIVE}2"
 
-mkfs.ext4 -F 32 -n BOOT $PART1
+mkfs.fat -F 32 -n BOOT $PART1
 
 cryptsetup luksFormat $PART2
 cryptsetup open $PART2 cryptroot
@@ -37,8 +37,22 @@ btrfs subvolume create /mnt/@log
 umount /mnt
 
 mount -o compress=lzo,subvol=@root /dev/mapper/cryptroot /mnt
-mkdir -p /mnt/home /mnt/nix /mnt/persist /mnt/var/log
+mkdir -p /mnt/boot /mnt/home /mnt/nix /mnt/persist /mnt/var/log
 mount -o compress=lzo,subvol=@home /dev/mapper/cryptroot /mnt/home
 mount -o compress=lzo,subvol=@nix /dev/mapper/cryptroot /mnt/nix
 mount -o compress=lzo,subvol=@persist /dev/mapper/cryptroot /mnt/persist
 mount -o compress=lzo,subvol=@log /dev/mapper/cryptroot /mnt/var/log
+mount /dev/vda1 /mnt/boot
+
+nixos-generate-config --root /mnt
+
+mkdir /etc/nixos/nixos
+
+mv /etc/nixos/hardware-configuration.nix /etc/nixos/nixos
+rm /etc/nixos/configuration.nix
+cp flake.nix flake.lock home.nix /etc/nixos
+cp nixos/configuration.nix /etc/nixos/nixos
+
+nixos-install --flake /etc/nixos#tangaroa
+
+nixos-enter --root /mnt -c 'passwd lucas'
