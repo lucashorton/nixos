@@ -18,8 +18,41 @@
   boot.extraModulePackages = [];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/cbf6fdb9-3ff2-46e1-8b2a-b19ef2139093";
-    fsType = "ext4";
+    device = "/dev/disk/by-uuid/6fb04275-28e5-497d-829b-216d04a74f3f";
+    fsType = "btrfs";
+    options = ["subvol=@root"];
+  };
+
+  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/9af86944-ab7c-4b9c-b1b1-fb714697e775";
+
+  fileSystems."/home" = {
+    device = "/dev/disk/by-uuid/6fb04275-28e5-497d-829b-216d04a74f3f";
+    fsType = "btrfs";
+    options = ["subvol=@home"];
+  };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/6fb04275-28e5-497d-829b-216d04a74f3f";
+    fsType = "btrfs";
+    options = ["subvol=@nix"];
+  };
+
+  fileSystems."/persist" = {
+    device = "/dev/disk/by-uuid/6fb04275-28e5-497d-829b-216d04a74f3f";
+    fsType = "btrfs";
+    options = ["subvol=@persist"];
+  };
+
+  fileSystems."/var/log" = {
+    device = "/dev/disk/by-uuid/6fb04275-28e5-497d-829b-216d04a74f3f";
+    fsType = "btrfs";
+    options = ["subvol=@log"];
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/12CE-A600";
+    fsType = "vfat";
+    options = ["fmask=0022" "dmask=0022"];
   };
 
   swapDevices = [];

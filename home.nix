@@ -37,52 +37,7 @@
   xdg.userDirs.enable = true;
 
   home.packages = with pkgs; [
-    # Development
-    godot3
-    vimPlugins.LazyVim
-
-    # Archives
-    zip
-    xz
-    unzip
-    p7zip
-
-    # Utils
-    rsync
-    wget
-    curl
-    restic
-    inxi
-    figlet
-    ncdu
-    grim
-    slurp
-    wf-recorder
     ncmpcpp
-
-    # Graphics
-    gimp
-    inkscape
-    imv
-    zathura
-    blender
-
-    # Network
-    brave
-    nextcloud-client
-    remmina
-
-    # Productivity
-    foliate
-
-    # Nix
-    alejandra
-
-    # Fonts
-    font-awesome_5
-
-    # Icons
-    kora-icon-theme
   ];
 
   programs.git = {
@@ -292,6 +247,7 @@
 
   wayland.windowManager.sway = {
     enable = true;
+    checkConfig = false;
     config = {
       bars = [
         {
@@ -326,7 +282,7 @@
           };
           fonts = {
             names = ["MonoLisa Variable"];
-            style = "Regular";
+            style = "Medium";
             size = 10.0;
           };
         }
@@ -334,6 +290,7 @@
       modifier = "Mod4";
       startup = [
         {command = "mako";}
+        {command = "sleep 5; systemctl --user start kanshi.service";}
       ];
       colors = {
         background = "#${config.colorScheme.palette.base00}";
@@ -400,6 +357,17 @@
       };
       left = "h";
       menu = "fuzzel";
+      output = {
+        eDP-1 = {
+          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+        };
+        DP-5 = {
+          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+        };
+        HDMI-A-1 = {
+          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+        };
+      };
       right = "l";
       up = "k";
       window = {
