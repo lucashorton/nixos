@@ -46,13 +46,13 @@ mount /dev/vda1 /mnt/boot
 
 nixos-generate-config --root /mnt
 
-mkdir /etc/nixos/nixos
+mkdir /mnt/etc/nixos/nixos
 
-mv /etc/nixos/hardware-configuration.nix /etc/nixos/nixos
-rm /etc/nixos/configuration.nix
-cp flake.nix flake.lock home.nix /etc/nixos
-cp nixos/configuration.nix /etc/nixos/nixos
+mv /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/nixos
+rm /mnt/etc/nixos/configuration.nix
+cp flake.nix flake.lock home.nix /mnt/etc/nixos
+cp nixos/configuration.nix /mnt/etc/nixos/nixos
 
-nixos-install --flake /etc/nixos#tangaroa
+nixos-install --flake /mnt/etc/nixos#tangaroa
 
 nixos-enter --root /mnt -c 'passwd lucas'
