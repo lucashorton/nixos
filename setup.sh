@@ -18,8 +18,8 @@ EOF
 echo "Partitioning complete. New partition table:"
 fdisk -l $DRIVE
 
-PART1 = "${DRIVE}1"
-PART2 = "${DRIVE}2"
+PART1="${DRIVE}1"
+PART2="${DRIVE}2"
 
 mkfs.ext4 -F 32 -n BOOT $PART1
 
