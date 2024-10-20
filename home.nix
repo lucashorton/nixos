@@ -2,6 +2,7 @@
   config,
   pkgs,
   nix-colors,
+  lib,
   ...
 }: {
   imports = [
@@ -13,22 +14,22 @@
     name = "Tokyo Night";
     author = "Lucas Horton (https://github.com/lucashorton)";
     palette = {
-      base00 = "#24283b";
-      base01 = "#f28779";
-      base02 = "#d5ff80";
-      base03 = "#ffd173";
-      base04 = "#73d0ff";
-      base05 = "#dfbfff";
-      base06 = "#5ccfe6";
-      base07 = "#c0caf5";
-      base08 = "#fcfcfc";
-      base09 = "#f07171";
-      base0A = "#86b300";
-      base0B = "#f2ae49";
-      base0C = "#399ee6";
-      base0D = "#a37acc";
-      base0E = "#55b4d4";
-      base0F = "#5c6166";
+      base00 = "24283b";
+      base01 = "f28779";
+      base02 = "d5ff80";
+      base03 = "ffd173";
+      base04 = "73d0ff";
+      base05 = "dfbfff";
+      base06 = "5ccfe6";
+      base07 = "c0caf5";
+      base08 = "fcfcfc";
+      base09 = "f07171";
+      base0A = "86b300";
+      base0B = "f2ae49";
+      base0C = "399ee6";
+      base0D = "a37acc";
+      base0E = "55b4d4";
+      base0F = "5c6166";
     };
   };
 
@@ -36,9 +37,37 @@
   home.homeDirectory = "/home/lucas";
   xdg.userDirs.enable = true;
 
+  home.pointerCursor = {
+    name = "Adwaita";
+    package = pkgs.adwaita-icon-theme;
+    size = 24;
+  };
+
   home.packages = with pkgs; [
     ncmpcpp
+    mpc_cli
+    figlet
+    inxi
+    bitwarden
+    reaper
+    kora-icon-theme
+    bitwarden-desktop
+    sway-audio-idle-inhibit
   ];
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita";
+      package = pkgs.gnome-themes-extra;
+    };
+  };
 
   programs.git = {
     enable = true;
@@ -76,24 +105,24 @@
         dpi-aware = "yes";
       };
       colors = {
-        foreground = "#${config.colorScheme.palette.base07}";
-        background = "#${config.colorScheme.palette.base00}";
-        regular0 = "#${config.colorScheme.palette.base00}";
-        regular1 = "#${config.colorScheme.palette.base01}";
-        regular2 = "#${config.colorScheme.palette.base02}";
-        regular3 = "#${config.colorScheme.palette.base03}";
-        regular4 = "#${config.colorScheme.palette.base04}";
-        regular5 = "#${config.colorScheme.palette.base05}";
-        regular6 = "#${config.colorScheme.palette.base06}";
-        regular7 = "#${config.colorScheme.palette.base07}";
-        bright0 = "#${config.colorScheme.palette.base08}";
-        bright1 = "#${config.colorScheme.palette.base09}";
-        bright2 = "#${config.colorScheme.palette.base0A}";
-        bright3 = "#${config.colorScheme.palette.base0B}";
-        bright4 = "#${config.colorScheme.palette.base0C}";
-        bright5 = "#${config.colorScheme.palette.base0D}";
-        bright6 = "#${config.colorScheme.palette.base0E}";
-        bright7 = "#${config.colorScheme.palette.base0F}";
+        foreground = "${config.colorScheme.palette.base07}";
+        background = "${config.colorScheme.palette.base00}";
+        regular0 = "${config.colorScheme.palette.base00}";
+        regular1 = "${config.colorScheme.palette.base01}";
+        regular2 = "${config.colorScheme.palette.base02}";
+        regular3 = "${config.colorScheme.palette.base03}";
+        regular4 = "${config.colorScheme.palette.base04}";
+        regular5 = "${config.colorScheme.palette.base05}";
+        regular6 = "${config.colorScheme.palette.base06}";
+        regular7 = "${config.colorScheme.palette.base07}";
+        bright0 = "${config.colorScheme.palette.base08}";
+        bright1 = "${config.colorScheme.palette.base09}";
+        bright2 = "${config.colorScheme.palette.base0A}";
+        bright3 = "${config.colorScheme.palette.base0B}";
+        bright4 = "${config.colorScheme.palette.base0C}";
+        bright5 = "${config.colorScheme.palette.base0D}";
+        bright6 = "${config.colorScheme.palette.base0E}";
+        bright7 = "${config.colorScheme.palette.base0F}";
       };
     };
   };
@@ -119,14 +148,14 @@
         layer = "overlay";
       };
       colors = {
-        background = "#${config.colorScheme.palette.base00}";
-        text = "#${config.colorScheme.palette.base07}";
-        input = "#${config.colorScheme.palette.base07}";
-        placeholder = "#${config.colorScheme.palette.base07}";
-        match = "#${config.colorScheme.palette.base01}";
-        selection = "#${config.colorScheme.palette.base01}";
-        selection-text = "#${config.colorScheme.palette.base07}";
-        border = "#${config.colorScheme.palette.base00}";
+        background = "${config.colorScheme.palette.base00}ff";
+        text = "${config.colorScheme.palette.base07}ff";
+        input = "${config.colorScheme.palette.base07}ff";
+        placeholder = "${config.colorScheme.palette.base07}ff";
+        match = "${config.colorScheme.palette.base01}ff";
+        selection = "${config.colorScheme.palette.base06}ff";
+        selection-text = "${config.colorScheme.palette.base00}ff";
+        border = "${config.colorScheme.palette.base00}ff";
       };
       border = {
         width = 8;
@@ -143,6 +172,9 @@
           {
             block = "focused_window";
             format = " $title.str(max_w:56) |";
+            theme_overrides = {
+              idle_fg = "#${config.colorScheme.palette.base02}";
+            };
           }
           {
             block = "music";
@@ -183,7 +215,7 @@
             };
           };
         };
-        icons = "awesome5";
+        icons = "awesome6";
       };
     };
   };
@@ -220,9 +252,9 @@
           }
         ];
         profile.exec = [
-          "\${pkg.sway}/bin/swaymsg workspace 1, move workspace to eDP-1"
-          "\${pkg.sway}/bin/swaymsg workspace 2, move workspace to DP-5"
-          "\${pkg.sway}/bin/swaymsg workspace 3, move workspace to HDMI-A-1"
+          "swaymsg workspace 1, move workspace to eDP-1"
+          "swaymsg workspace 2, move workspace to DP-5"
+          "swaymsg workspace 3, move workspace to HDMI-A-1"
         ];
       }
     ];
@@ -243,6 +275,17 @@
 
   services.mpd = {
     enable = true;
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "My PipeWire Output"
+      }
+    '';
+  };
+
+  services.mpdris2 = {
+    enable = true;
+    notifications = true;
   };
 
   wayland.windowManager.sway = {
@@ -281,7 +324,7 @@
             statusline = "#${config.colorScheme.palette.base07}";
           };
           fonts = {
-            names = ["MonoLisa Variable"];
+            names = ["MonoLisa Variable" "Font Awesome 6 Free"];
             style = "Medium";
             size = 10.0;
           };
@@ -289,7 +332,7 @@
       ];
       modifier = "Mod4";
       startup = [
-        {command = "mako";}
+        {command = "sway-audio-idle-inhibit";}
         {command = "sleep 5; systemctl --user start kanshi.service";}
       ];
       colors = {
@@ -355,17 +398,33 @@
         smartBorders = "on";
         smartGaps = false;
       };
+      input = {
+        "2362:628:PIXA3854:00_093A:0274_Touchpad" = {
+          tap = "enabled";
+          drag = "enabled";
+        };
+      };
+      keybindings = let
+        modifier = config.wayland.windowManager.sway.config.modifier;
+      in
+        lib.mkOptionDefault
+        {
+          "XF86AudioRaiseVolume" = "exec 'pactl set-sink-volume @DEFAULT_SINK@ +1%'";
+          "XF86AudioLowerVolume" = "exec 'pactl set-sink-volume @DEFAULT_SINK@ -1%'";
+          "XF86AudioMute" = "exec 'pactl set-sink-mute @DEFAULT_SINK@ toggle'";
+        };
+
       left = "h";
       menu = "fuzzel";
       output = {
         eDP-1 = {
-          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+          bg = "/home/lucas/Pictures/beach.jpg fill";
         };
         DP-5 = {
-          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+          bg = "/home/lucas/Pictures/beach.jpg fill";
         };
         HDMI-A-1 = {
-          bg = "/home/lucas/Pictures/cyberpunk.png fill";
+          bg = "/home/lucas/Pictures/beach.jpg fill";
         };
       };
       right = "l";
@@ -382,8 +441,30 @@
     };
   };
 
+  services.swayidle = {
+    enable = true;
+    timeouts = [
+      {
+        timeout = 300;
+        command = "${pkgs.swaylock}/bin/swaylock -fF";
+      }
+      {
+        timeout = 900;
+        command = "${pkgs.systemd}/bin/systemctl suspend";
+      }
+    ];
+  };
+
   programs.swaylock = {
     enable = true;
+    settings = {
+      color = "${config.colorScheme.palette.base00}";
+      font-size = 24;
+      indicator-idle-visible = false;
+      indicator-radius = 100;
+      line-color = "ffffff";
+      show-failed-attempts = true;
+    };
   };
 
   home.stateVersion = "24.05";
