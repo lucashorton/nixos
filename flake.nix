@@ -30,7 +30,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.lucas = import ./home.nix;
+          home-manager.users.lucas = import ./home-manager/home.nix;
           home-manager.extraSpecialArgs = {
             inherit nixvim;
             inherit nix-colors;
