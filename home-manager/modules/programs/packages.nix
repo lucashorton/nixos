@@ -12,7 +12,6 @@
     blender
     chromium
     figlet
-    firefox
     foliate
     gimp
     godot_4

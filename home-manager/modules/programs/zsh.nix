@@ -10,6 +10,7 @@
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
+    defaultKeymap = "emacs";
     shellAliases = {
       vi = "nvim";
       vim = "nvim";

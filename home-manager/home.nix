@@ -12,6 +12,7 @@
     ./modules/theme/colorscheme.nix
     ./modules/theme/cursor.nix
     ./modules/theme/gtk.nix
+    ./modules/programs/firefox.nix
     ./modules/programs/foot.nix
     ./modules/programs/fuzzel.nix
     ./modules/programs/fzf.nix
@@ -22,6 +23,7 @@
     ./modules/programs/starship.nix
     ./modules/programs/sway.nix
     ./modules/programs/swaylock.nix
+    ./modules/programs/tmux.nix
     ./modules/programs/zsh.nix
     ./modules/services/kanshi.nix
     ./modules/services/mako.nix
