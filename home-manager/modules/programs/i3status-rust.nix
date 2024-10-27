@@ -24,6 +24,7 @@
           {
             block = "backlight";
             device = "intel_backlight";
+            format = "  $brightness ";
           }
           {
             block = "battery";

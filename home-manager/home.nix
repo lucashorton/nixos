@@ -20,6 +20,7 @@
     ./modules/programs/i3status-rust.nix
     ./modules/programs/nixvim.nix
     ./modules/programs/packages.nix
+    ./modules/programs/ssh.nix
     ./modules/programs/starship.nix
     ./modules/programs/sway.nix
     ./modules/programs/swaylock.nix
@@ -28,6 +29,7 @@
     ./modules/services/kanshi.nix
     ./modules/services/mako.nix
     ./modules/services/mpdris2.nix
+    ./modules/services/ssh-agent.nix
     ./modules/services/swayidle.nix
     ./modules/user/lucas.nix
   ];

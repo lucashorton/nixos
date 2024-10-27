@@ -9,7 +9,7 @@
   home.packages = with pkgs; [
     bitwarden
     bitwarden-desktop
-    blender
+    blender-hip
     chromium
     figlet
     foliate
