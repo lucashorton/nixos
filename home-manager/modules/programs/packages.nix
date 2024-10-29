@@ -1,0 +1,32 @@
+{
+  config,
+  pkgs,
+  nixvim,
+  nix-colors,
+  lib,
+  ...
+}: {
+  home.packages = with pkgs; [
+    autotiling
+    bitwarden
+    bitwarden-desktop
+    blender-hip
+    chromium
+    devbox
+    figlet
+    foliate
+    gimp
+    godot_4
+    inkscape
+    inxi
+    kora-icon-theme
+    krita
+    mpc_cli
+    mpvpaper
+    ncmpcpp
+    nextcloud-client
+    reaper
+    remmina
+    vscodium
+  ];
+}
