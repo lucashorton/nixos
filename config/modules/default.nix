@@ -11,7 +11,6 @@
     ./fonts.nix
     ./gnome-keyring.nix
     ./internationalization.nix
-    ./kanshi.nix
     ./network.nix
     ./opentabletdriver.nix
     ./packages.nix
