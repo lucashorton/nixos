@@ -15,6 +15,6 @@
       vi = "nvim";
       vim = "nvim";
     };
-    initExtra = "NAME=$(figlet $HOST)\necho $fg[green]$NAME\necho ''\ninxi\necho ''";
+    initExtra = "autoload colors; colors\nNAME=$(figlet $HOST)\necho $fg[green]$NAME\necho ''\ninxi\necho ''";
   };
 }
