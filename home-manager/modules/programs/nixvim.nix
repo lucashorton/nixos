@@ -2,7 +2,6 @@
   config,
   pkgs,
   nixvim,
-  nix-colors,
   lib,
   ...
 }: {
