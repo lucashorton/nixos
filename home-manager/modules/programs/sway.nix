@@ -50,7 +50,7 @@
       modifier = "Mod4";
       startup = [
         {command = "autotiling";}
-        {command = "\$(pkgs.foot}/bin/foot -s";
+        {command = "\$(pkgs.foot}/bin/foot -s";}
         {command = "sleep 5; systemctl --user start kanshi.service";}
         {command = "sway-audio-idle-inhibit";}
         #{command = "mpvpaper -p -o '--loop panscan=1.0' '*' ${config.home.homeDirectory}/Video/Backgrounds/CozyBalconyOasis_4K_cc2023.mp4";}
