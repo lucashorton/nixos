@@ -9,7 +9,6 @@
     ./modules/boot.nix
     ./modules/display-manager.nix
     ./modules/editor.nix
-    ./modules/flatpak.nix
     ./modules/fonts.nix
     ./modules/gnome-keyring.nix
     ./modules/internationalization.nix

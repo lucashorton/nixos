@@ -24,7 +24,6 @@
     ./modules/programs/packages.nix
     ./modules/programs/ssh.nix
     ./modules/programs/starship.nix
-    ./modules/programs/steam.nix
     ./modules/programs/sway.nix
     ./modules/programs/swaylock.nix
     ./modules/programs/tmux.nix
