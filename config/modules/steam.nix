@@ -1,9 +1,7 @@
 {
   config,
-  pkgs,
-  nixvim,
-  nix-colors,
   lib,
+  pkgs,
   ...
 }: {
   programs.steam = {

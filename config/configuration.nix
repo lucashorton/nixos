@@ -20,6 +20,7 @@
     ./modules/polkit.nix
     ./modules/printing.nix
     ./modules/sound.nix
+    ./modules/steam.nix
     ./modules/sway.nix
     ./modules/timezone.nix
     ./modules/user.nix
