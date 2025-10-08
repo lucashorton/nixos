@@ -1,0 +1,42 @@
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  home.packages = with pkgs; [
+    audacity
+    blender-hip
+    chromium
+    curl
+    devbox
+    ffmpeg
+    figlet
+    foliate
+    gimp
+    godot_4
+    grim
+    htop
+    imv
+    inkscape
+    inxi
+    krita
+    mpc_cli
+    mpv
+    ncdu
+    ncmpcpp
+    nextcloud-client
+    p7zip
+    pavucontrol
+    protonmail-desktop
+    reaper
+    remmina
+    restic
+    rsync
+    unzip
+    wget
+    xz
+    zip
+    zoom-us
+  ];
+}

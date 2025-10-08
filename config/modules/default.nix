@@ -1,0 +1,21 @@
+{
+  imports = [
+    ./boot.nix
+    ./display-manager.nix
+    ./editor.nix
+    ./fonts.nix
+    ./gc.nix
+    ./gnome.nix
+    ./internationalization.nix
+    ./network.nix
+    ./opentabletdriver.nix
+    ./packages.nix
+    ./printing.nix
+    ./sound.nix
+    ./steam.nix
+    ./timezone.nix
+    ./upgrade.nix
+    ./user.nix
+    ./zsh.nix
+  ];
+}
