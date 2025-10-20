@@ -5,7 +5,7 @@
   services.desktopManager.gnome.enable = true;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs geary epiphany ];
+  environment.gnome.excludePackages = with pkgs; [ gnome-maps gnome-music gnome-weather gnome-contacts snapshot decibels gnome-calendar gnome-tour gnome-user-docs geary epiphany totem yelp ];
   environment.systemPackages = [ pkgs.gnomeExtensions.appindicator  ];
   services.udev.packages = [ pkgs.gnome-settings-daemon ];
   qt = {
