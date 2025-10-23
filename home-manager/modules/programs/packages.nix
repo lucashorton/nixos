@@ -6,6 +6,7 @@
 }: {
   home.packages = with pkgs; [
     audacity
+    bat
     blender-hip
     chromium
     curl

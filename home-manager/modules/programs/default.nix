@@ -6,6 +6,7 @@
     ./fzf.nix
     ./ghostty.nix
     ./git.nix
+    ./helix.nix
     ./packages.nix
     ./ssh.nix
     ./starship.nix
