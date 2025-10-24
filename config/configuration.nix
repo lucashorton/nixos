@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   pkgs,
   ...
@@ -14,7 +13,7 @@
 
   # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
 }

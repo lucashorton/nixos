@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   lib,
   inputs,
@@ -10,7 +9,6 @@
   ];
 
   home.stateVersion = "25.05";
-  home.sessionPath = [ "$HOME/.config/emacs/bin" ];
   programs.home-manager.enable = true;
   catppuccin = {
     enable = true;

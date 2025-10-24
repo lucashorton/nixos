@@ -8,9 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix/release-25.05";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-    };
   };
 
   outputs = inputs @ {
