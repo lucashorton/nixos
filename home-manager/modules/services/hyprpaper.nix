@@ -6,7 +6,7 @@
       wallpaper = [
 	{
 	monitor="";
-	path="/home/lucas/Pictures/desert.jpg";
+	path="/home/lucas/Pictures/plants.jpg";
 	}
       ];
     };
