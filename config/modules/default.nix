@@ -1,0 +1,23 @@
+{
+  imports = [
+    ./blueman.nix
+    ./boot.nix
+    ./editor.nix
+    ./flatpak.nix
+    ./fonts.nix
+    ./gc.nix
+    ./hyprland.nix
+    ./internationalization.nix
+    ./network.nix
+    ./opentabletdriver.nix
+    ./packages.nix
+    ./printing.nix
+    ./sound.nix
+    ./solaar.nix
+    ./timezone.nix
+    ./tuned.nix
+    ./upgrade.nix
+    ./user.nix
+    ./zsh.nix
+  ];
+}
