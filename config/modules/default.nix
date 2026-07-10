@@ -9,7 +9,6 @@
     ./hyprland.nix
     ./internationalization.nix
     ./network.nix
-    ./opentabletdriver.nix
     ./packages.nix
     ./printing.nix
     ./sound.nix
