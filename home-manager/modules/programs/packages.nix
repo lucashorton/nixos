@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     audacity
     bat
-    blender
+    pkgsRocm.blender 
     chromium
     clojure
     curl
