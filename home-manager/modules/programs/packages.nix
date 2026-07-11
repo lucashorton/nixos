@@ -39,6 +39,7 @@
     remmina
     restic
     rsync
+    spotify
     thunderbird
     unzip
     wget
