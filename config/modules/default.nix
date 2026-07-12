@@ -13,6 +13,7 @@
     ./printing.nix
     ./sound.nix
     ./solaar.nix
+    ./steam.nix
     ./timezone.nix
     ./tuned.nix
     ./upgrade.nix

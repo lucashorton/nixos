@@ -10,7 +10,6 @@
     ./packages.nix
     ./ssh.nix
     ./starship.nix
-    ./steam.nix
     ./tmux.nix
     ./waybar.nix
     ./wofi.nix
