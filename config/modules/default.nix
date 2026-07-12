@@ -6,6 +6,7 @@
     ./flatpak.nix
     ./fonts.nix
     ./gc.nix
+    ./gnome.nix
     ./hyprland.nix
     ./internationalization.nix
     ./network.nix
