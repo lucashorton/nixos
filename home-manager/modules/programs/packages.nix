@@ -5,6 +5,7 @@
   ...
 }: {
   home.packages = with pkgs; [
+    abcde
     audacity
     bat
     pkgsRocm.blender 
@@ -43,6 +44,7 @@
     thunderbird
     unzip
     wget
+    whipper
     xz
     zathura
     zip

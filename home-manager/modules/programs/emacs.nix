@@ -14,6 +14,7 @@
       epkgs.doom-modeline
       epkgs.eca
       epkgs.emms
+      epkgs.evil
       epkgs.lsp-mode
       epkgs.magit
       epkgs.marginalia
