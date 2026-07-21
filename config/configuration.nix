@@ -42,9 +42,13 @@
   hardware.graphics.enable32Bit = true;
   hardware.steam-hardware.enable = true;
 
+# Enable appimages
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
 # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = false;
 }

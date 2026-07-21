@@ -31,7 +31,6 @@
     ncdu
     neovim
     nixfmt
-    rmpc
     nextcloud-client
     p7zip
     pass
@@ -39,6 +38,7 @@
     reaper
     remmina
     restic
+    rmpc
     rsync
     spotify
     thunderbird
