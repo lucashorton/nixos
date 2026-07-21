@@ -1,5 +1,7 @@
 {
   imports = [
+    ./1password.nix
+    ./autoscrub.nix
     ./blueman.nix
     ./boot.nix
     ./editor.nix
