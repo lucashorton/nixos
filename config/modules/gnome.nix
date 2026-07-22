@@ -7,10 +7,11 @@
   services.gnome.core-apps.enable = true;
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
-  environment.gnome.excludePackages = with pkgs; [ gnome-calendar gnome-contacts gnome-maps gnome-software epiphany gnome-tour gnome-user-docs simple-scan yelp];
+  environment.gnome.excludePackages = with pkgs; [ decibels gnome-calendar gnome-clocks gnome-connections gnome-contacts gnome-logs gnome-maps gnome-music gnome-software epiphany gnome-text-editor gnome-console gnome-calculator gnome-system-monitor baobab gnome-disk-utility gnome-tour gnome-user-docs simple-scan snapshot showtime yelp];
   environment.systemPackages = with pkgs; [
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator
+    gnomeExtensions.paperwm
   ];
   programs.dconf.profiles.user.databases = [
     {

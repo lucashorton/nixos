@@ -2,14 +2,14 @@
   imports = [
     ./1password.nix
     ./autoscrub.nix
-    ./blueman.nix
+#    ./blueman.nix
     ./boot.nix
     ./editor.nix
     ./flatpak.nix
     ./fonts.nix
     ./gc.nix
     ./gnome.nix
-    ./hyprland.nix
+#    ./hyprland.nix
     ./internationalization.nix
     ./network.nix
     ./packages.nix
@@ -21,7 +21,7 @@
     ./tuned.nix
     ./upgrade.nix
     ./user.nix
-    ./uwsm.nix
+#    ./uwsm.nix
     ./zsh.nix
   ];
 }
