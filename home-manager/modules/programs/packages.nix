@@ -41,7 +41,6 @@
     rmpc
     rsync
     spotify
-    thunderbird
     unzip
     wget
     whipper

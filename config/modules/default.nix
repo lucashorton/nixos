@@ -21,6 +21,7 @@
     ./tuned.nix
     ./upgrade.nix
     ./user.nix
+    ./uwsm.nix
     ./zsh.nix
   ];
 }
