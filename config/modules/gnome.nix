@@ -11,7 +11,6 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.alphabetical-app-grid
     gnomeExtensions.appindicator
-    gnomeExtensions.paperwm
   ];
   programs.dconf.profiles.user.databases = [
     {
