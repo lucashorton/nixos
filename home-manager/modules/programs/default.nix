@@ -5,14 +5,11 @@
     ./firefox.nix
     ./ghostty.nix
     ./git.nix
-    #./hyprland.nix
     ./notmuch.nix
     ./packages.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
-    #./waybar.nix
-    #./wofi.nix
     ./zen-browser.nix
     ./zsh.nix
   ];

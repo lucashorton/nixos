@@ -9,23 +9,18 @@
     audacity
     bat
     pkgsRocm.blender 
-    #chromium
     clojure
     code-cursor
     curl
     devbox
     ffmpeg
     figlet
-    #foliate
     gimp
-    #godot_4
+    godot_4
     google-chrome
-    #grim
     htop
-    #imv
     inkscape
     inxi
-    #krita
     leiningen
     mpc
     mpv
@@ -35,9 +30,7 @@
     nextcloud-client
     p7zip
     pass
-    #pavucontrol
     reaper
-    #remmina
     restic
     rmpc
     rsync
@@ -46,7 +39,6 @@
     wget
     whipper
     xz
-    #zathura
     zip
   ];
 }
