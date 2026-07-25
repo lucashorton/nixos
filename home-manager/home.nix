@@ -10,25 +10,4 @@
     accent = "sky";
     flavor = "mocha";
   };
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-  };
-  home.pointerCursor = {
-    enable = true;
-    gtk.enable = true;
-    # x11.enable = true;
-    package = pkgs.phinger-cursors;
-    name = "phinger-cursors-dark";
-    size = 28;
-  };
-  home.file.".zprofile".text = ''
-    export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
-    if uwsm check may-start; then
-      exec uwsm start hyprland.desktop
-    fi
-  '';
 }
