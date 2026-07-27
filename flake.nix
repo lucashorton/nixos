@@ -7,7 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix/release-26.05";
     zen-browser = {
     url = "github:0xc000022070/zen-browser-flake";
     inputs = {
@@ -27,7 +26,6 @@
 
   outputs = inputs @ {
     nixpkgs,
-    catppuccin,
     zen-browser,
     emacs-overlay,
     solaar,
@@ -38,7 +36,6 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        catppuccin.nixosModules.catppuccin
 	solaar.nixosModules.default
         home-manager.nixosModules.home-manager
         ./config/configuration.nix
@@ -50,7 +47,6 @@
           home-manager.users.lucas = {
             imports = [
               ./home-manager/home.nix
-              catppuccin.homeModules.catppuccin
             ];
           };
           home-manager.backupFileExtension = "backup";
