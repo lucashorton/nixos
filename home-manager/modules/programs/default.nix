@@ -8,7 +8,6 @@
     ./gtk.nix
     ./notmuch.nix
     ./packages.nix
-    ./qt.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
