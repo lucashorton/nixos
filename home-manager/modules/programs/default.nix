@@ -5,6 +5,7 @@
     ./firefox.nix
     ./ghostty.nix
     ./git.nix
+    ./gtk.nix
     ./notmuch.nix
     ./packages.nix
     ./ssh.nix
