@@ -43,6 +43,8 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  networking.nameservers = [ "1.1.1.1" "1.0.0.1" ];
+
 # Enable unfree packages
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "26.05";

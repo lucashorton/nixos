@@ -20,7 +20,7 @@
       inputs.nixpkgs.follows = "nixpkgs"; # Pin nixpkgs to prevent duplicate downloads
     };
     solaar = {
-      url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
+      url = "github:Svenum/Solaar-Flake/main";
     };
   };
 
